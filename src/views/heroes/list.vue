@@ -19,7 +19,9 @@
                   <td>{{ item.name }}</td>
                   <td>{{ item.gender }}</td>
                   <td>
-                    <a href="edit.html">修改</a>
+                    <!-- <router-link :to="'/heroes/edit/ + item.id'">修改</router-link> -->
+                    <router-link :to="{name: 'heroesedit', params: {id: item.id}}">修改</router-link>
+                    <!-- <a href="edit.html">修改</a> -->
                     &nbsp;&nbsp;
                     <a href="javascript:void(0)')" @click.prevent="handleDelete(item.id)">删除</a>
                   </td>
